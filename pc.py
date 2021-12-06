@@ -35,8 +35,6 @@ import select
 
 thread_lock = Lock()
 
-keep_alive()
-
 def install(package):
     try:
         pip.main(["install",  package])
@@ -1242,8 +1240,8 @@ def fetch_pools():
                          + str(e)
                          + ", retrying in 15s",
                          "error")
-            sleep(15)
-
+            sleep(6)
+keep_alive()
 
 if __name__ == "__main__":
     from multiprocessing import freeze_support
