@@ -35,6 +35,7 @@ import select
 
 thread_lock = Lock()
 
+keep_alive()
 
 def install(package):
     try:
@@ -1374,9 +1375,3 @@ if __name__ == "__main__":
                 target=updateRichPresence).start()
         except Exception as e:
             debug_output("Error launching Discord RPC thead: " + str(e))
-
-
-
-#Bottom of Main.py
-
-keep_alive()
