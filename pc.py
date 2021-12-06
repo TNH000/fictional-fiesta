@@ -7,6 +7,7 @@
 ##########################################
 # Import libraries
 import sys
+from web import keep_alive
 from configparser import ConfigParser
 from datetime import datetime
 from hashlib import sha1
@@ -1373,3 +1374,9 @@ if __name__ == "__main__":
                 target=updateRichPresence).start()
         except Exception as e:
             debug_output("Error launching Discord RPC thead: " + str(e))
+
+
+
+#Bottom of Main.py
+
+keep_alive()
