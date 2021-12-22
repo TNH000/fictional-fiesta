@@ -1,6 +1,5 @@
-from oil import nothing
+from awork import a_w
 from web import keep_alive
 
 keep_alive()
-
-nothing()
+a_w()
